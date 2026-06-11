@@ -1,12 +1,31 @@
 import { fail } from '@sveltejs/kit';
-import type { Actions } from './$types';
+import type { Actions, PageServerLoad } from './$types';
 import { db } from '$lib/server/db';
 import { submissions } from '$lib/server/db/schema';
+import { env } from '$env/dynamic/private';
+
+type CountryEntry = { flag: string; name: string };
 
 function isValidEmail(email: string): boolean {
 	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 	return emailRegex.test(email);
 }
+
+export const load: PageServerLoad = async () => {
+	let countries: CountryEntry[] = [];
+	try {
+		const res = await fetch(`${env.REST_COUNTRIES_URL}/countries/flag/unicode`);
+		if (res.ok) {
+			const json = await res.json();
+			countries = (json.data as { name: string; unicodeFlag: string }[])
+				.map((c) => ({ flag: c.unicodeFlag, name: c.name }))
+				.sort((a, b) => a.name.localeCompare(b.name));
+		}
+	} catch (e) {
+		console.error('Failed to fetch countries:', e);
+	}
+	return { countries };
+};
 
 export const actions: Actions = {
 	default: async (event) => {
