@@ -15,6 +15,13 @@
       "when": 1781176814007,
       "tag": "0001_mature_jane_foster",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1781177865820,
+      "tag": "0002_lonely_preak",
+      "breakpoints": true
     }
   ]
 }
