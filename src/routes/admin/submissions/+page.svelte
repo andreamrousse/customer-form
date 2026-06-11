@@ -64,59 +64,59 @@
 	.container {
 		max-width: 1000px;
 		margin: 0 auto;
-		padding: 2rem;
-		font-family: system-ui, -apple-system, sans-serif;
+		padding: var(--spacing-xl);
 	}
 
 	.header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 2rem;
-		gap: 2rem;
+		margin-bottom: var(--spacing-xl);
+		gap: var(--spacing-xl);
 	}
 
 	h1 {
-		color: #333;
+		color: var(--color-text);
 		margin: 0;
 		flex: 1;
+		font-size: var(--font-size-lg);
 	}
 
 	.sign-out-btn {
-		padding: 0.5rem 1rem;
-		background-color: #dc3545;
+		padding: var(--spacing-xs) var(--spacing-md);
+		background-color: var(--color-danger);
 		color: white;
 		font-weight: 600;
 		border: none;
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		cursor: pointer;
 		transition: background-color 0.2s;
 		white-space: nowrap;
 	}
 
 	.sign-out-btn:hover {
-		background-color: #c82333;
+		background-color: var(--color-danger-hover);
 	}
 
 	.user-info {
-		color: #666;
-		margin-bottom: 2rem;
+		color: var(--color-text-secondary);
+		margin-bottom: var(--spacing-xl);
 		font-size: 0.95rem;
 	}
 
 	.empty-state {
 		text-align: center;
 		padding: 3rem;
-		color: #999;
-		background-color: #f9f9f9;
-		border-radius: 4px;
+		color: var(--color-gray-lighter);
+		background-color: var(--color-gray-light);
+		border-radius: var(--border-radius);
 	}
 
 	.table-wrapper {
 		overflow-x: auto;
-		margin-bottom: 2rem;
-		border: 1px solid #ddd;
-		border-radius: 4px;
+		margin-bottom: var(--spacing-xl);
+		border: 1px solid var(--color-border);
+		border-radius: var(--border-radius);
 	}
 
 	table {
@@ -125,31 +125,31 @@
 	}
 
 	thead {
-		background-color: #f5f5f5;
+		background-color: var(--color-table-header-bg);
 	}
 
 	th {
-		padding: 1rem;
+		padding: var(--spacing-md);
 		text-align: left;
 		font-weight: 600;
-		color: #333;
-		border-bottom: 2px solid #ddd;
+		color: var(--color-text);
+		border-bottom: 2px solid var(--color-border);
 	}
 
 	td {
-		padding: 1rem;
-		border-bottom: 1px solid #e9e9e9;
+		padding: var(--spacing-md);
+		border-bottom: 1px solid var(--color-border-subtle);
 		color: #555;
 	}
 
 	tr:hover {
-		background-color: #fafafa;
+		background-color: var(--color-hover-bg);
 	}
 
 	.count {
 		font-size: 0.9rem;
-		color: #666;
-		margin-bottom: 2rem;
+		color: var(--color-text-secondary);
+		margin-bottom: var(--spacing-xl);
 	}
 
 	.back-link {
@@ -158,7 +158,7 @@
 	}
 
 	.back-link a {
-		color: #0066cc;
+		color: var(--color-primary);
 		text-decoration: none;
 	}
 
@@ -178,7 +178,7 @@
 
 		th,
 		td {
-			padding: 0.75rem;
+			padding: var(--spacing-sm);
 			font-size: 0.9rem;
 		}
 	}

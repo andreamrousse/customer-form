@@ -60,78 +60,78 @@
 	.container {
 		max-width: 400px;
 		margin: 0 auto;
-		padding: 2rem;
-		font-family: system-ui, -apple-system, sans-serif;
+		padding: var(--spacing-xl);
 	}
 
 	h1 {
-		color: #333;
-		margin-bottom: 0.5rem;
+		color: var(--color-text);
+		margin-bottom: var(--spacing-xs);
+		font-size: var(--font-size-lg);
 	}
 
 	p {
-		color: #666;
-		margin-bottom: 2rem;
+		color: var(--color-text-secondary);
+		margin-bottom: var(--spacing-xl);
 	}
 
 	.alert-error {
-		padding: 1rem;
-		margin-bottom: 1.5rem;
-		border-radius: 4px;
-		background-color: #f8d7da;
-		color: #721c24;
-		border: 1px solid #f5c6cb;
+		padding: var(--spacing-md);
+		margin-bottom: var(--spacing-lg);
+		border-radius: var(--border-radius);
+		background-color: var(--color-error-bg);
+		color: var(--color-error-text);
+		border: 1px solid var(--color-error-border);
 		font-weight: 500;
 	}
 
 	.form-group {
-		margin-bottom: 1.5rem;
+		margin-bottom: var(--spacing-lg);
 	}
 
 	label {
 		display: block;
-		margin-bottom: 0.5rem;
+		margin-bottom: var(--spacing-xs);
 		font-weight: 600;
-		color: #333;
+		color: var(--color-text);
 	}
 
 	input {
 		width: 100%;
-		padding: 0.75rem;
-		font-size: 1rem;
-		border: 1px solid #ddd;
-		border-radius: 4px;
+		padding: var(--spacing-sm);
+		font-size: var(--font-size-base);
+		border: 1px solid var(--color-border);
+		border-radius: var(--border-radius);
 		font-family: inherit;
 		box-sizing: border-box;
 	}
 
 	input:focus {
 		outline: none;
-		border-color: #0066cc;
+		border-color: var(--color-primary);
 		box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
 	}
 
 	input:disabled {
-		background-color: #f5f5f5;
+		background-color: var(--color-disabled-bg);
 		opacity: 0.6;
 		cursor: not-allowed;
 	}
 
 	button {
 		width: 100%;
-		padding: 0.75rem;
-		background-color: #0066cc;
+		padding: var(--spacing-sm);
+		background-color: var(--color-primary);
 		color: white;
 		font-weight: 600;
-		font-size: 1rem;
+		font-size: var(--font-size-base);
 		border: none;
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		cursor: pointer;
 		transition: background-color 0.2s;
 	}
 
 	button:hover:not(:disabled) {
-		background-color: #0052a3;
+		background-color: var(--color-primary-hover);
 	}
 
 	button:disabled {
@@ -141,12 +141,12 @@
 
 	.back-link {
 		text-align: center;
-		margin-top: 1.5rem;
+		margin-top: var(--spacing-lg);
 		font-size: 0.9rem;
 	}
 
 	.back-link a {
-		color: #0066cc;
+		color: var(--color-primary);
 		text-decoration: none;
 	}
 
